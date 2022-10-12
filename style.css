@@ -1,0 +1,45 @@
+body{
+    background: rgba(0, 0, 0, 0.2);
+
+}
+.center{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ball{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: limegreen;
+    box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.1),
+                 10px 10px 2px rgba(0, 0, 0, 0.1);
+    animation: X 3s linear 0s infinite alternate,
+               Y 2s linear 0s infinite alternate;
+}
+@keyframes X {
+    from{
+        left: 0;
+    }
+    to{
+        left: 280px;
+    }
+}
+@keyframes Y{
+    from{
+        top: 0;
+    }
+    to{
+        top: 280px;
+    }
+}
